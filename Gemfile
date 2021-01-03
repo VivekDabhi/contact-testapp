@@ -56,6 +56,7 @@ group :test do
   gem 'rspec-rails', '~> 4.0.1'
   gem 'faker'
   gem 'pry', '~> 0.13.1'
+  gem 'simplecov', require: false, group: :test
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
