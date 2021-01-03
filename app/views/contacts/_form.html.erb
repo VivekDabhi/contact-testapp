@@ -1,0 +1,51 @@
+<%#= javascript_include_tag 'contact_detail', 'data-turbolinks-track' => true %>
+<div class="container-fluid padding-over">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="col-md-8 col-xs-12">
+      <h3 style="text-align: center;">
+        <%= link_to 'Contact Details', root_path, class: 'btn btn-raised btn-sm btn-light pull-left' %>
+      </h3>
+      <br><%= form_for [@contact], validate: true do |f| %>
+        <div class="panel-body">
+          <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+            <label class="control-label">First Name</label>
+            <span class="text-danger">*</span>
+            <%= f.text_field :first_name, class: "form-control"%>
+            <span class="error"><%= @contact.errors.messages[:first_name].join(' ')%></span>
+          </div>
+
+          <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+            <label class="control-label">Last Name</label>
+            <span class="text-danger">*</span>
+            <%= f.text_field :last_name, class: "form-control"%>
+            <span class="error"><%= @contact.errors.messages[:last_name].join(' ')%></span>
+          </div>
+
+          <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+            <label class="control-label">Email</label>
+            <span class="text-danger">*</span>
+            <%= f.text_field :email, class: "form-control"%>
+            <span class="error"><%= @contact.errors.messages[:email].join(' ')%></span>
+          </div>
+
+          <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+            <label class="control-label">Contact</label>
+            <span class="text-danger">*</span>
+            <%= f.text_field :phone, class: "form-control"%>
+            <span class="error"><%= @contact.errors.messages[:phone].join(' ')%></span>
+          </div>
+
+          <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+            <label class="control-label">Message</label>
+            <%= f.text_area(:message, size: '30x4', class: "form-control") %>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="panel-footer text-right">
+          <%= f.submit "Save",class: 'btn btn-raised btn-sm btn-primary' %>
+          <%= link_to "Back", contacts_path, class: 'btn btn-raised btn-sm btn-danger' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

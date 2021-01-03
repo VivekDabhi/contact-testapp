@@ -1,0 +1,42 @@
+<div class="col-md-12 col-sm-12 col-xs-12 margin-top-6">
+  <div class="col-md-12 col-sm-12 col-xs-12 panel panel-inverse">
+    <div class="panel-heading panel-title">
+      <h3 style="text-align: center;">
+        <%= link_to 'Contact Details', root_path, class: 'btn btn-raised btn-sm btn-light pull-left',style:"margin-left: 0%;" %>
+      </h3>
+    </div><br>
+    <br><div class="panel-body">
+      <%= link_to 'Create New Contact Details', new_contact_path, class: 'btn btn-raised btn-sm btn-primary pull-left',style:"margin-left: 84%;" %><br>
+      <br><table class="table table-bordered margin-bottom-over">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Contact_no</th>
+            <th>Message</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @contacts.each_with_index do |contact,index| %>
+            <tr>
+              <%= page_index(params[:page], index) %>
+              <td><%= contact.first_name %></td>
+              <td><%= contact.last_name %></td>
+              <td><%= contact.email %></td>
+              <td><%= contact.phone %></td>
+              <td><%= contact.message %></td>
+              <td>
+                <%= link_to "Edit".html_safe, edit_contact_path(contact), class: 'btn btn-raised btn-sm btn-primary' %>
+                <%= link_to "Show".html_safe, contact_path(contact), class: 'btn btn-raised btn-sm btn-primary' %>
+                <%= link_to "Delete".html_safe,contact, method: :delete, class:'btn btn-raised btn-sm btn-danger', data: { confirm: 'Are you sure?' }  %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
