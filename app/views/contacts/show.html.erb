@@ -3,36 +3,36 @@
     <%= link_to 'Contact Details', root_path, class: 'btn btn-raised btn-sm btn-light pull-left' %>
   </h3>
 	<div class="panel-body">
-			<div class="clearfix"></div>
-		    <div class="table-responsive info-set">
-			    <table class="table table-bordered">
-				    <tbody>
-				  	<tr>
-				    	<td><b>First Name:</b></td>
-				    	<td><%= @contact&.first_name %></td>
-				  	</tr>
-				  	<tr>
-				    	<td><b>Last Name:</b></td>
-				    	<td><%= @contact&.last_name %></td>
-				  	</tr>
-				  	<tr>
-				    	<td><b>Email:</b></td>
-				    	<td><%= @contact&.email %></td>
-				  	</tr>
-				  	<tr>
-				    	<td><b>Contact:</b></td>
-				    	<td><%= @contact&.phone %></td>
-				  	</tr>
-				  	<tr>
-				    	<td><b>Message:</b></td>
-				    	<td><%= @contact&.message %></td>
-				  	</tr>
-				  </tbody>
-			 	</table>
-			</div>
-			<div class="panel-footer text-right">
-			 	<%= link_to "Back", contacts_path, class: 'btn btn-raised btn-sm btn-primary' %>
-		 	</div>
+		<div class="clearfix"></div>
+    <div class="table-responsive info-set">
+	    <table class="table table-bordered">
+		    <tbody>
+			  	<tr>
+			    	<td><b>First Name:</b></td>
+			    	<td><%= @contact&.first_name %></td>
+			  	</tr>
+			  	<tr>
+			    	<td><b>Last Name:</b></td>
+			    	<td><%= @contact&.last_name %></td>
+			  	</tr>
+			  	<tr>
+			    	<td><b>Email:</b></td>
+			    	<td><%= @contact&.email %></td>
+			  	</tr>
+			  	<tr>
+			    	<td><b>Contact:</b></td>
+			    	<td><%= @contact&.phone %></td>
+			  	</tr>
+			  	<tr>
+			    	<td><b>Message:</b></td>
+			    	<td><%= @contact&.message %></td>
+			  	</tr>
+		  	</tbody>
+	 		</table>
+		</div>
+		<div class="panel-footer text-right">
+		 	<%= link_to "Back", contacts_path, class: 'btn btn-raised btn-sm btn-primary' %>
+	 	</div>
 	</div>
 </div>
 <div class="clearfix"></div>
