@@ -45,7 +45,6 @@ rails db:migrate
 
 Step 10: Run Rails Server
 
-
 ```bash
 rails s
 ```
